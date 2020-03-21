@@ -633,6 +633,8 @@ end
   simp,
 end
 
+instance f_of_f_is_hom : is_group_hom (f_of_h ∘ h_of_f) := is_group_hom.comp _ _
+
 lemma f_of_f (f : F) : f_of_h (h_of_f f) = f := begin
   suffices g : f_of_h (h_of_f f) = to_group of f,
   rw g,
